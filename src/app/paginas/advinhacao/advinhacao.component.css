@@ -1,0 +1,163 @@
+.card{
+width: 520px;
+height: 640px;
+justify-content: center;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+margin-top: 40px;
+border: 4px solid;
+border-radius: 8px;
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,225,252,1) 100%);
+user-select: none;
+position: relative;
+}
+.imgTelaPrincipal{
+    width: 160px;
+    height: 160px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-user-drag: none;
+}
+
+.imgJogo{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-user-drag: none;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+#h2T{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.botao{
+    border: 4px solid rgb(17, 0, 255);
+    border-radius: 8px;
+    width: 280px;
+    height: 40px;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    text-align: center;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+}
+#botaoJF{
+    width: 200px;
+    justify-content: center;
+}
+.tdJF{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#inputTJ{
+    font-size: 32px;
+    padding-left: 10px;
+    text-align: left;
+}
+#inputTJ:hover{
+    cursor:auto;
+}
+#botaoJ{
+    width: 120px;
+    font-size: 28px;
+}
+#botaoF{
+    width: 240px;
+    height: 60px;
+    word-wrap: break-word;
+    font-weight: bold;
+    line-height: 60px;
+    font-size: 24px;
+}
+.botao:hover{
+    cursor: pointer;
+}
+.botao:active{
+    transform: translate(0px, 4px);
+    background-color: rgb(172, 35, 35);
+}
+td{
+    padding-top: 20px;
+}
+#tdT{
+    padding-top: 1px;
+}
+.tdImgJ{
+    padding-top: 1px;
+    padding-bottom:20px
+}
+.tdImgF{
+    padding-top: 0px;
+    padding-bottom:0px
+}
+.resultado{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+::placeholder{
+    color: rgb(255, 205, 205);
+}
+.tentativas{
+    padding-top:1px;
+}
+.dica{
+    border: 4px solid rgb(17, 0, 255);
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    background: rgb(253, 39, 39);
+}
+.circulo{
+    border: 4px solid rgb(17, 0, 255);
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    background: rgb(253, 39, 39);
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Tiny5';
+    font-weight: bold;
+    z-index: 4;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+}
+.circulo:hover{
+    cursor: pointer;   
+}
+.circulo:active{
+    background-color:rgb(218, 37, 37);
+    transform: translateY(4px);
+}
+#dica{
+    left: 90%;
+    background-image: url(imagens/hint.png);
+    background-size: 100%;
+    background-color: lightgray;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#dica:hover{
+    cursor: auto;
+}
+#dica:active{
+    transform: none
+}

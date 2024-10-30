@@ -1,0 +1,27 @@
+
+<div class="popup">
+<h1 mat-dialog-title class="titulo">Escolha a dificuldade</h1>
+<div mat-dialog-Content class="escolhas">
+    <form action="">
+        <table>
+            <tbody>
+                <tr>
+                    <td><p>fácil</p></td>
+                    <td><input type="radio" class="dificuldade" name="dificuldade"  (change)="radioS($event)" id="r1" [checked]="radioA"></td>
+                </tr>
+                <tr>
+                    <td><p>Normal</p></td>
+                    <td><input type="radio" class="dificuldade" name="dificuldade" (change)="radioS($event)" id="r2" [checked]="radioB"></td>
+                </tr>
+                <tr>
+                    <td><p>Difícil</p></td>
+                    <td><input type="radio" class="dificuldade" name="dificuldade"  (change)="radioS($event)" id="r3" [checked]="radioC"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <div class="fechar" mat-button (click)="fechar()">FECHAR</div>
+</div>
+</div>

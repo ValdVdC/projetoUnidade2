@@ -1,0 +1,75 @@
+<!-- O QUE ESTA COMENTADO AQUI SERÁ IMPLEMENTADO FUTURAMENTE. DIFICULDADES FÁCIL E NORMAL NÃO ESTÃO COMO EU QUERO. -->
+
+
+<table class="card">
+    <tbody>
+        <div *ngIf="estagioMenu">
+            <tr>
+                <td *ngFor="let pokemon of pokemons"><img class="imgTelaPrincipal" src="{{pokemon.sprite}}" alt=""></td>
+            </tr>
+            <tr>
+                <td colspan="3"><h1>Quem é este pokemon?</h1></td>
+            </tr>
+            <tr>
+                <td colspan="3"><div class="botao"(click)="iniciar()">Iniciar</div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><div class="botao" id="dfc" (click)="abrir($event)">Dificuldade</div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><div class="botao" id="grc" (click)="abrir($event)">Gerações</div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><div class="botao" routerLink="/">Sair</div></td>
+            </tr>
+        </div>
+        <div *ngIf="estagioJogo">
+            <div class="circulo" (click)="ngOnInit()">{{'<'}}</div>
+            <!-- <div *ngIf="dificuldadeNormal" class="circulo" id="dica"></div> -->
+            <tr>
+                <td><h1>Quem é este pokemon?</h1></td>
+            </tr>
+            <tr>
+                <td class="tdImgJ"><img src="{{imgPoke}}" alt="" class="imgJogo" [style.width]="tamanho" [style.height]="tamanho" [style.filter]="'brightness(' + brilho + ')'"></td>
+            </tr>
+            <!-- <div *ngIf="dificuldadeFacil">
+                <tr>
+                   <td class="tdJF"><div class="botao" id="botaoJF" (click)="enviarF($event)">{{nomePoke}}</div></td>
+                   <td class="tdJF"><div class="botao" id="botaoJF" (click)="enviarF($event)">Bla</div></td>
+                </tr>
+                <tr>
+                    <td><div class="botao" id="botaoJF" (click)="enviarF($event)">Bla</div></td>
+                    <td><div class="botao" id="botaoJF" (click)="enviarF($event)">Bla</div></td>
+                </tr>
+            </div> -->
+            <div>
+                <tr>
+                    <td><input type="text"  id="inputTJ"  class="botao" autocomplete="off" (keyup)="escreve(valor.value)" #valor (keyup.enter)="enviarD()"placeholder="Digite aqui" [value]="tentDigitada"></td>
+                    <td><div class="botao" id="botaoJ" (click)="enviarD()">Enviar</div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="tentativas"><h2>Tentativas: {{tentativas}}</h2></td>
+                </tr>
+            </div>
+        </div>
+        <div *ngIf="estagioFim">
+            <div *ngIf="resultadoGanhou"><h1>Parabéns<br>você acertou!</h1></div>
+            <div *ngIf="resultadoPerdeu"><h1>Que pena</h1><h2>O pokemon era: {{nomePoke}}</h2></div>
+            <tr>
+                <td colspan="3" class="tdImgF"><img src="{{imgPoke}}" alt="" class="imgJogo" [style.width]="tamanho" [style.height]="tamanho"></td>
+            </tr>
+            <tr *ngIf="resultadoPerdeu">
+                <td colspan="3" id="tdT">
+                    <h2 id="h2T">Suas tentativas foram: <br>{{nomeTentativas.join(' | ')}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td id="tdT"><div class="botao" id="botaoF" (click)="iniciar()">Tentar novamente</div></td>
+                <td><div class="botao" id="botaoF" (click)="ngOnInit()">Menu principal</div></td>
+            </tr>
+        </div>
+    </tbody>
+</table>
+
+
+

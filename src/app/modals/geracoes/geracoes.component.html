@@ -1,0 +1,50 @@
+<div class="popup">
+    <h1 mat-dialog-title class="titulo">Escolha as gerações</h1>
+    <div mat-dialog-Content class="escolhas">
+    <form action="">
+        <table>
+            <tbody>
+                <tr>
+                    <td><p>Primeira Geração</p></td>
+                    <td><input  type="checkbox" class="dificuldade" id="c1" [checked]="checkA" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Segunda Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c2" [checked]="checkB" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Terceira Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c3" [checked]="checkC" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Quarta Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c4" [checked]="checkD" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Quinta Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c5" [checked]="checkE" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Sexta Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c6" [checked]="checkF" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Sétima Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c7" [checked]="checkG" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Oitava Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c8" [checked]="checkH" (change)="radioS($event)"></td>
+                </tr>
+                <tr>
+                    <td><p>Nona Geração</p></td>
+                    <td><input type="checkbox" class="dificuldade" id="c9" [checked]="checkI" (change)="radioS($event)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    </div>
+    <div mat-dialog-actions>
+        <div class="fechar" mat-button (click)="fechar()">FECHAR</div>
+    </div>
+</div>

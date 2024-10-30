@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+.popup{
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,225,252,1) 100%);
+    color: white;
+    user-select: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    font-size: 24px;
+}
+.titulo{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: "Tiny5";
+}
+p{
+    margin: 8px;
+}
+.escolhas{
+    padding-left: 16px;
+}
+.dificuldade{
+    margin-left: 80px;
+    height:20px; 
+    width:20px;
+    accent-color: red;
+}
+.fechar{
+    border: 4px solid  rgb(17, 0, 255);
+    border-radius: 8px;
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+    background-color: red;
+    text-align: center;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+    font-size: 24px;
+}
+.fechar:hover{
+    cursor: pointer;
+}
+.fechar:active{
+    transform: translate(0px, 4px);
+    background-color: rgb(172, 35, 35);
+}
