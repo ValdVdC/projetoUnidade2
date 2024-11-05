@@ -1,1 +1,72 @@
-<p>pokedex works!</p>
+<div class="card">
+<table class="tabelaMain" *ngIf="telaPokedex">
+    <tr>
+      <table class="tabelaPoke" id="matriz">
+          <tr *ngFor="let row of pokemons | slice:0:9 | parte:3">
+            <td class="tdCel" *ngFor="let pokemon of row">
+              <img class="imagemCelula" [src]="pokemon.sprite" (click)="buscar($event)">
+              <p>{{pokemon.nome}}</p>        
+            </td>
+          </tr>
+      </table>
+    </tr>
+    <div class="espaco">
+      <td><input type="text" class="botaoInput" (keyup)="escreve(valor.value)" #valor (keyup.enter)="buscar($event)"placeholder="Digite aqui" [value]=""></td>
+      <td><input type="button" class="botaoBuscar" value='Buscar' (click)="buscar($event)"></td>
+    </div>
+    <tr>
+    <table class="tabelaPoke">
+          <tr>
+              <td class="tdBotao"><input type="button" (click)="anterior()" class="botao" value="< voltar"></td>
+              <td class="tdBotao"><input type="button" (click)="proximo()" class="botao" value="Próximo >"></td>
+          </tr>
+        </table>
+      </tr>
+      <tr>
+        <table class="tabelaPoke" id="tabelaRadio">
+          <div class="divRadios">
+            <tr>
+                <td><input type="radio" name="cor" id="c1" (change)="corS($event)" [checked]="c1">Normal</td>
+                <td><input type="radio" name="cor" id="c2" (change)="corS($event)" [checked]="c2">Shiny</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="dimensao" id="d1" (change)="dimensaoS($event)" [checked]="d1">2D</td>
+                <td><input type="radio" name="dimensao" id="d2" (change)="dimensaoS($event)" [checked]="d2">3D</td>
+            </tr>
+          </div>    
+      </table>
+    </tr>
+</table>
+<table class="tabelaMain" *ngIf="telaInfo">
+  <tr>
+    <table>
+      <tr>
+        <table class="tabelaPoke">
+          <tr>
+            <td>
+              <div class="circulo" (click)="ngOnInit()">
+                <
+              </div>
+            </td>
+          </tr>
+          <tr>
+              <div *ngIf="carregando">
+                <td>
+                  <div class="spin"></div>
+                </td>
+              </div>
+              <div *ngIf="!carregando">
+                <td *ngFor="let info of pokemonInfo">
+                  <img *ngIf="!carregando" class="imagemPrincipal" id="" src={{info.sprite}}>
+                  <p class="pInfo">{{info.nome}}</p>
+                  <p class="pInfo">{{info.id}}</p>
+                  <p class="pInfo">{{info.tipo}}</p>
+                </td>
+              </div>
+          </tr>
+        </table>
+      </tr>
+    </table>
+  </tr>
+</table>
+</div>

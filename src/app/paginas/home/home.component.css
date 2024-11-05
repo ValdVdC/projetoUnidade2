@@ -1,5 +1,6 @@
 .background{
     height: 100%;
+    user-select: none;
 }
 .escolha{
     width: 244px;
@@ -12,12 +13,19 @@
     background-image: url(imagens/imgJogo1.png); 
     background-size: 100%;
 }
+#pokedex{
+    background-image: url(imagens/imgPokedex.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 .escolha:hover{
     cursor: pointer;
 }
 .escolha:active{
+    filter: brightness(90%);
     transform: translate(0px, 4px);
-    background-color: rgb(20, 20, 136);
 }
 .tabela{
     margin-left: auto;

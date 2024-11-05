@@ -11,6 +11,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { DificuldadeComponent } from './modals/dificuldade/dificuldade.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { GeracoesComponent } from './modals/geracoes/geracoes.component';
+import { PartePipe } from './pipes/parte.pipe';
 
 
 
@@ -23,6 +24,7 @@ import { GeracoesComponent } from './modals/geracoes/geracoes.component';
     AdvinhacaoComponent,
     DificuldadeComponent,
     GeracoesComponent,
+    PartePipe,
   ],
   imports: [
     BrowserModule,
