@@ -108,6 +108,8 @@ export class AdvinhacaoComponent implements OnInit{
     this.popupService.abrirD();
     }else if(event.target.id=='grc'){
       this.popupService.abrirG();
+    }else if(event.target.id=='tema'){
+      this.popupService.abrirT()
     }
   }
   fechar(){

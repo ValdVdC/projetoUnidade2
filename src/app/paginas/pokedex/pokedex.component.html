@@ -2,10 +2,11 @@
 <table class="tabelaMain" *ngIf="telaPokedex">
     <tr>
       <table class="tabelaPoke" id="matriz">
+        <div class="circulo" id="voltar" routerLink="/"><</div>
           <tr *ngFor="let row of pokemons | slice:0:9 | parte:3">
             <td class="tdCel" *ngFor="let pokemon of row">
               <img class="imagemCelula" [src]="pokemon.sprite" (click)="buscar($event)">
-              <p>{{pokemon.nome}}</p>        
+              <p>{{pokemon.nome}}</p>     
             </td>
           </tr>
       </table>
@@ -17,8 +18,8 @@
     <tr>
     <table class="tabelaPoke">
           <tr>
-              <td class="tdBotao"><input type="button" (click)="anterior()" class="botao" value="< voltar"></td>
-              <td class="tdBotao"><input type="button" (click)="proximo()" class="botao" value="Próximo >"></td>
+              <td class="tdBotao"><input type="button" (click)="anterior()" class="botao" value="< voltar" appZoom></td>
+              <td class="tdBotao"><input type="button" (click)="proximo()" class="botao" value="Próximo >" appZoom></td>
           </tr>
         </table>
       </tr>
@@ -58,9 +59,11 @@
               <div *ngIf="!carregando">
                 <td *ngFor="let info of pokemonInfo">
                   <img *ngIf="!carregando" class="imagemPrincipal" id="" src={{info.sprite}}>
-                  <p class="pInfo">{{info.nome}}</p>
-                  <p class="pInfo">{{info.id}}</p>
-                  <p class="pInfo">{{info.tipo}}</p>
+                  <p class="pInfo">Nome: {{info.nome}}</p>
+                  <p class="pInfo">ID: {{info.id}}</p>
+                  <p class="pInfo">Tipo: {{info.tipo}}</p>
+                  <p class="pInfo">Altura: {{info.altura}}</p>
+                  <p class="pInfo">Peso: {{info.peso}} Quilos</p>
                 </td>
               </div>
           </tr>

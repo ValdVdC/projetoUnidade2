@@ -1,0 +1,27 @@
+<div class="popup" appBgColorAdvinhacao>
+    <h1 mat-dialog-title class="titulo">Escolha o tema</h1>
+    <div mat-dialog-Content class="escolhas">
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <p>Azul</p>
+                        <td><input type="radio" class="tema" name="tema" (change)="radioS($event)" id="r1" [checked]="radioA"></td>
+                    </tr>
+                    <tr>
+                        <p>Verde</p>
+                        <td><input type="radio" class="tema" name="tema" (change)="radioS($event)" id="r2" [checked]="radioB"></td>
+                    </tr>
+                    <tr>
+                        <p>Roxo</p>
+                        <td><input type="radio" class="tema" name="tema" (change)="radioS($event)" id="r3" [checked]="radioC"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <div class="fechar" mat-button (click)="fechar()" appZoom>FECHAR</div>
+    </div>
+    </div>
+    

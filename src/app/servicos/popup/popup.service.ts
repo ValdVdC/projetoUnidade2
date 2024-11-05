@@ -3,6 +3,7 @@ import { MatDialog} from '@angular/material/dialog';
 import { DificuldadeComponent } from '../../modals/dificuldade/dificuldade.component';
 import { BehaviorSubject } from 'rxjs';
 import { GeracoesComponent } from '../../modals/geracoes/geracoes.component';
+import { TemaAdvComponent } from '../../modals/tema-adv/tema-adv.component';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,11 @@ import { GeracoesComponent } from '../../modals/geracoes/geracoes.component';
 export class PopupService {
   
   private dificuldade = new BehaviorSubject('r2')
+  private tema = new BehaviorSubject('r1')
   private geracao = new BehaviorSubject<any>(['c1']);
   getDificuldade = this.dificuldade.asObservable();
   getGeracao = this.geracao.asObservable();
+  getTema = this.tema.asObservable();
 
   constructor(private dialog: MatDialog) { }
   
@@ -21,6 +24,9 @@ export class PopupService {
   }
   setGeracao(geracao:any){
     this.geracao.next(this.geracao.getValue().concat([geracao]))
+  }
+  setTema(tema:any){
+    this.tema.next(tema)
   }
   removeGeracao(geracao:any){
     const geracoes = this.geracao.getValue();
@@ -58,7 +64,20 @@ export class PopupService {
         this.fechar()
       }
   }
-
+  abrirT(){
+    if(this.dialog.openDialogs.length==0){
+      this.dialog.open(TemaAdvComponent, {
+        height:'380px',
+        width:'240px',
+        panelClass:'dialogo',
+        disableClose:true,
+      })
+      
+      }
+      else if(this.dialog.openDialogs.length==1){
+        this.fechar()
+      }
+  }
   fechar(){
     this.dialog.closeAll()
   }

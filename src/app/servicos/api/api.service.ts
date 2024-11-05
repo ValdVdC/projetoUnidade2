@@ -60,18 +60,30 @@ export class ApiService{
   async buscar(){
     const data:any = await lastValueFrom(this.http.get(`https://pokeapi.co/api/v2/pokemon/${this.pokeBuscado.value}`));
     console.log(data)
-    let sTipo:any 
+    let sTipo:string 
+    let altura:number
+    let medidaA: string
       if(data.types.length==2){
         sTipo = `${data.types['0'].type.name} / ${data.types['1'].type.name}`
       }
       else{
         sTipo=data.types['0'].type.name
       }
+      if(data.height<10){
+        altura = data.height*10
+        medidaA ='centímetros'
+      }else{
+        altura = data.height/10
+        medidaA = 'metros'
+      }
       const novoPokemon=[{
       nome: data.name,
       id:data.id,
       sprite: data.sprites.other[this.dimensaoString][this.corString],
-      tipo: sTipo
+      tipo: sTipo,
+      altura: `${altura} ${medidaA}`,
+      peso: data.weight/10,
+
     }]
    
     this.pokemonInfo.next(novoPokemon)

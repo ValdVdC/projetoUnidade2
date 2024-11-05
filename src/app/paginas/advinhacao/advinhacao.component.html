@@ -1,7 +1,7 @@
 <!-- O QUE ESTA COMENTADO AQUI SERÁ IMPLEMENTADO FUTURAMENTE. DIFICULDADES FÁCIL E NORMAL NÃO ESTÃO COMO EU QUERO. -->
 
 
-<table class="card">
+<table class="card" appBgColorAdvinhacao>
     <tbody>
         <div *ngIf="estagioMenu">
             <tr>
@@ -11,17 +11,18 @@
                 <td colspan="3"><h1>Quem é este pokemon?</h1></td>
             </tr>
             <tr>
-                <td colspan="3"><div class="botao"(click)="iniciar()">Iniciar</div></td>
+                <td colspan="3"><div class="botao"(click)="iniciar()" appZoom>Iniciar</div></td>
             </tr>
             <tr>
-                <td colspan="3"><div class="botao" id="dfc" (click)="abrir($event)">Dificuldade</div></td>
+                <td colspan="3"><div class="botao" id="dfc" (click)="abrir($event)" appZoom>Dificuldade</div></td>
             </tr>
             <tr>
-                <td colspan="3"><div class="botao" id="grc" (click)="abrir($event)">Gerações</div></td>
+                <td colspan="3"><div class="botao" id="grc" (click)="abrir($event)" appZoom>Gerações</div></td>
             </tr>
             <tr>
-                <td colspan="3"><div class="botao" routerLink="/">Sair</div></td>
+                <td colspan="3"><div class="botao" routerLink="/" appZoom>Sair</div></td>
             </tr>
+            <div class="circulo" (click)="abrir($event)" id="tema" appZoom></div>
         </div>
         <div *ngIf="estagioJogo">
             <div class="circulo" (click)="ngOnInit()">{{'<'}}</div>
@@ -45,7 +46,7 @@
             <div>
                 <tr>
                     <td><input type="text"  id="inputTJ"  class="botao" autocomplete="off" (keyup)="escreve(valor.value)" #valor (keyup.enter)="enviarD()"placeholder="Digite aqui" [value]="tentDigitada"></td>
-                    <td><div class="botao" id="botaoJ" (click)="enviarD()">Enviar</div></td>
+                    <td><div class="botao" id="botaoJ" (click)="enviarD()" appZoom>Enviar</div></td>
                 </tr>
                 <tr>
                     <td colspan="2" class="tentativas"><h2>Tentativas: {{tentativas}}</h2></td>

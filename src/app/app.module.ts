@@ -12,6 +12,9 @@ import { DificuldadeComponent } from './modals/dificuldade/dificuldade.component
 import { MatDialogModule } from '@angular/material/dialog';
 import { GeracoesComponent } from './modals/geracoes/geracoes.component';
 import { PartePipe } from './pipes/parte.pipe';
+import { BgColorAdvinhacaoDirective } from './diretivas/bgColor/bg-color-advinhacao.directive';
+import { TemaAdvComponent } from './modals/tema-adv/tema-adv.component';
+import { ZoomDirective } from './diretivas/zoom/zoom.directive';
 
 
 
@@ -25,6 +28,9 @@ import { PartePipe } from './pipes/parte.pipe';
     DificuldadeComponent,
     GeracoesComponent,
     PartePipe,
+    BgColorAdvinhacaoDirective,
+    TemaAdvComponent,
+    ZoomDirective,
   ],
   imports: [
     BrowserModule,

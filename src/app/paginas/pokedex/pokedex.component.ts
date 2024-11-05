@@ -65,8 +65,6 @@ export class PokedexComponent implements OnInit, OnDestroy{
       this.subscription = this.apiService.getPokemonInfo.subscribe(pokeInfo=>{
       this.pokemonInfo = pokeInfo
       this.carregando=false
-      console.log(this.pokemonInfo)
-
     })
   }
   
@@ -106,6 +104,7 @@ export class PokedexComponent implements OnInit, OnDestroy{
      }else{
       this.d1 = false
       this.d2 = true
+      
      }
   }
 

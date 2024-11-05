@@ -5,17 +5,19 @@
 .escolha{
     width: 244px;
     height: 244px;
-    background-color: red;
     border: 4px solid white;
     border-radius: 6px;
 }
 #jogoAdv{
+    width: 244px;
+    height: 244px;
     background-image: url(imagens/imgJogo1.png); 
     background-size: 100%;
 }
 #pokedex{
+    background-color: red;
     background-image: url(imagens/imgPokedex.png);
-    background-size: 85%;
+    background-size: 88%;
     background-repeat: no-repeat;
     background-position: center;
 

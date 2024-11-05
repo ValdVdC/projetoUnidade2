@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 .popup{
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,225,252,1) 100%);
     color: white;
     user-select: none;
     margin-left: auto;
